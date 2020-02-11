@@ -1,85 +1,169 @@
 @import "../../../variables.scss";
-.intro {
-  // background: darken($color: $bgColor, $amount: 9);
-  width: 80%;
-  height: 70vh;
-  margin: auto;
-  margin-top: 2rem;
-  font-family: $heading;
-  .intro-desc {
-    width: 50%;
-    height: 100%;
-    float: left;
-    h1 {
-      font-size: 45px;
-      font-weight: 800;
-      padding-top: 2rem;
-      text-align: center;
-      color: darken($color: $black, $amount: 9);
-    }
-    h4 {
-      color: darken($color: $headerColor, $amount: 5);
-      font-size: 25px;
-      font-weight: 600;
-      text-align: center;
-      padding-top: 2rem;
-      padding-bottom: 2rem;
-    }
-    .contact-button {
-      width: 80%;
-      margin: auto;
-      margin-right: 10%;
-      height: 50px;
-      text-align: center;
-      background: $blueColor;
-      color: $bgColor;
-      display: flex;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
+section {
+  width: 100vw;
+  .intro {
+    // background: darken($color: $bgColor, $amount: 9);
+    width: 80%;
+    height: 70vh;
+    margin: auto;
+    margin-top: 2rem;
+    font-family: $heading;
 
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-
-      p {
+    .intro-desc {
+      width: 50%;
+      height: 100%;
+      float: left;
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        padding-top: 2rem;
+        text-align: center;
+        color: darken($color: $black, $amount: 9);
+      }
+      h4 {
+        color: darken($color: $headerColor, $amount: 5);
+        font-size: 1.7rem;
+        font-weight: 600;
+        text-align: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+      .contact-button {
+        width: 80%;
+        margin: auto;
+        margin-right: 10%;
+        height: 50px;
+        text-align: center;
         background: $blueColor;
-        font-size: 1.3rem;
+        color: $bgColor;
+        display: flex;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        p {
+          background: $blueColor;
+          font-size: 1.3rem;
+        }
+      }
+
+      .donate-button {
+        width: 80%;
+        margin: auto;
+        margin-right: 10%;
+        margin-top: 1.5rem;
+        height: 50px;
+        text-align: center;
+        // background: $blueColor;
+        font-weight: 500;
+        color: darken($color: $headerColor, $amount: 5);
+        display: flex;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border: solid 1px #333;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        p {
+          font-size: 1.3rem;
+        }
       }
     }
 
-    .donate-button {
-      width: 80%;
-      margin: auto;
-      margin-right: 10%;
-      margin-top: 1.5rem;
-      height: 50px;
-      text-align: center;
-      // background: $blueColor;
-      font-weight: 500;
-      font-size: 1.3rem;
-      color: darken($color: $headerColor, $amount: 5);
-      display: flex;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
-      border: solid 1px #333;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
+    div {
+      width: 50%;
+      height: 100%;
+      float: right;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
+}
 
-  div {
-    width: 50%;
-    height: 100%;
-    float: right;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
 
-    img {
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  .intro {
+    .intro-desc {
+      h1 {
+        font-size: 2rem;
+      }
+      h4 {
+        font-size: 1.4rem;
+      }
+
+      .contact-button {
+        p {
+          background: $blueColor;
+          font-size: 1.1rem;
+        }
+      }
+
+      .donate-button {
+        p {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 785px) {
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 680px) {
+  .intro {
+    .intro-desc {
+      float: none;
+      display: block;
       width: 100%;
       height: 100%;
+      margin: auto;
+
+      h1 {
+        font-size: 1.8rem;
+      }
+      h4 {
+        font-size: 1.2rem;
+      }
+
+      .contact-button {
+        p {
+          background: $blueColor;
+          font-size: 01rem;
+        }
+      }
+
+      .donate-button {
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+    div {
+      float: none;
+      display: none;
+      width: 100%;
+      margin: auto;
     }
   }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

@@ -1,0 +1,24 @@
+.sponsors {
+  height: 100px;
+  width: 100vw;
+  background-color: #ccc;
+  border: 1px solid #333;
+  overflow: hidden;
+
+  .container {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    img {
+      width: 90px;
+      height: auto;
+      margin-right: 0.5rem;
+      margin-left: 0.5rem;
+    }
+  }
+}
