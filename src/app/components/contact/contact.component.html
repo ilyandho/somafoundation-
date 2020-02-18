@@ -1,0 +1,42 @@
+<section class="contact">
+  <h4>Contect with Us</h4>
+  <div class="container">
+    <div class="form" (ngSubmit)="onSubmit()">
+      <form [formGroup]="message">
+        <label for="name"> Name:</label>
+        <input
+          id="name"
+          type="text"
+          formControlName="name"
+          placeholder="Enter your name ..."
+          required
+        />
+
+        <label for="email">
+          Email:
+        </label>
+        <input
+          id="email"
+          type="email"
+          formControlName="email"
+          placeholder="Enter your email ..."
+          required
+        />
+        <label for="message"> Message: </label>
+        <textarea
+          id="message"
+          type="textarea"
+          cols="50"
+          rows="5"
+          formControlName="textMessage"
+          placeholder="Enter your message"
+          required
+        >
+        </textarea>
+
+        <button type="submit" [disabled]="!message.valid">Send Message</button>
+      </form>
+    </div>
+    <div class="address-info"></div>
+  </div>
+</section>

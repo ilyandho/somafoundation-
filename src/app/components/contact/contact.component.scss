@@ -1,0 +1,108 @@
+@import "../../../variables.scss";
+
+.contact {
+  width: 100%;
+  height: 500px;
+  margin-top: 2rem;
+  font-family: $heading;
+  text-align: center;
+  background: #ccc;
+  h4 {
+    padding-top: 1.6rem;
+    font-size: 1.6rem;
+    background: #ccc;
+    height: 15%;
+  }
+  .container {
+    border: 1px solid $blueColor;
+    background: #ccc;
+    height: 80%;
+    width: 70%;
+    margin: auto;
+    .form {
+      width: 60%;
+      height: 100%;
+      float: left;
+      text-align: left;
+      background: #ccc;
+      padding-left: 1.2rem;
+      padding-top: 1.2rem;
+      padding-right: 1.5rem;
+
+      label {
+        display: block;
+        padding-top: 0.8rem;
+        background: #ccc;
+        & ~ input {
+          display: block;
+          width: 100%;
+          padding-left: 1.2rem;
+          height: 40px;
+          border: 1px solid #333;
+          background: #ccc;
+        }
+
+        & ~ textarea {
+          display: block;
+          width: 100%;
+          border: 1px solid #333;
+          padding-bottom: 1.2rem;
+          padding-left: 1.2rem;
+          font-family: $heading;
+          font-size: 0.8rem;
+          background: #ccc;
+        }
+      }
+      button {
+        display: block;
+        width: 80%;
+        height: 40px;
+        border: 1px solid #333;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background: #ccc;
+        width: 100%;
+        background: $blueColor;
+        margin-top: 5px;
+        color: #fff;
+        font-size: 1.2rem;
+      }
+
+      //   #name {
+      //     display: block;
+      //     & ~ input {
+      //       display: block;
+      //       width: 80%;
+      //       margin: auto;
+      //     }
+      //   }
+      //   #email {
+      //     display: block;
+      //     & ~ input {
+      //       display: block;
+      //       width: 80%;
+      //       margin: auto;
+      //     }
+      //   }
+      //   #message {
+      //     display: block;
+      //     & ~ input {
+      //       display: block;
+      //       width: 80%;
+      //       margin: auto;
+      //     }
+      //   }
+    }
+
+    .address-info {
+      width: 40%;
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      float: right;
+      background: $blueColor;
+    }
+  }
+}
