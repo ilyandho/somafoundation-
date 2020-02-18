@@ -8,9 +8,10 @@ section {
   font-family: $heading;
   background: rgb(243, 240, 240);
 
-  h3.header {
+  h2 {
     text-align: center;
     font-size: 2rem;
+    font-weight: 400;
     padding: 1.2rem;
     background: inherit;
   }
@@ -34,12 +35,28 @@ section {
       }
       h3 {
         padding: 1rem;
+        padding-bottom: 0.5rem;
         font-size: 1.4rem;
         color: $blueColor;
+        font-weight: 400;
+        cursor: pointer;
+
+        a {
+          text-transform: inherit;
+          text-decoration: none;
+          color: $blueColor;
+          padding: inherit;
+          font-weight: 400;
+          &:hover {
+            font-weight: 450;
+            color: darken($color: $blueColor, $amount: 30);
+          }
+        }
       }
 
       p {
         padding: 1rem;
+        padding-top: 0.5rem;
       }
 
       a {
@@ -47,9 +64,12 @@ section {
         text-decoration: none;
         color: $blueColor;
         padding: 1rem;
+
+        font-weight: 500;
         // padding-bottom: 2rem;
 
         &:hover {
+          color: darken($color: $blueColor, $amount: 30);
           i {
             padding-left: 0.5rem;
           }

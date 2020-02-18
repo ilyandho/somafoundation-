@@ -2,107 +2,160 @@
 
 .contact {
   width: 100%;
-  height: 500px;
-  margin-top: 2rem;
   font-family: $heading;
+  font-size: 1.3rem;
   text-align: center;
-  background: #ccc;
+  margin-bottom: 01rem;
+
   h4 {
-    padding-top: 1.6rem;
-    font-size: 1.6rem;
-    background: #ccc;
-    height: 15%;
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding: 0.7rem;
   }
   .container {
-    border: 1px solid $blueColor;
-    background: #ccc;
-    height: 80%;
     width: 70%;
     margin: auto;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     .form {
-      width: 60%;
-      height: 100%;
-      float: left;
-      text-align: left;
-      background: #ccc;
-      padding-left: 1.2rem;
-      padding-top: 1.2rem;
-      padding-right: 1.5rem;
-
-      label {
-        display: block;
-        padding-top: 0.8rem;
-        background: #ccc;
-        & ~ input {
-          display: block;
-          width: 100%;
-          padding-left: 1.2rem;
-          height: 40px;
-          border: 1px solid #333;
-          background: #ccc;
-        }
-
-        & ~ textarea {
-          display: block;
-          width: 100%;
-          border: 1px solid #333;
-          padding-bottom: 1.2rem;
-          padding-left: 1.2rem;
-          font-family: $heading;
-          font-size: 0.8rem;
-          background: #ccc;
-        }
-      }
-      button {
-        display: block;
-        width: 80%;
-        height: 40px;
-        border: 1px solid #333;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-        background: #ccc;
+      font-size: 1.2rem;
+      width: 100%;
+      form {
         width: 100%;
-        background: $blueColor;
-        margin-top: 5px;
-        color: #fff;
-        font-size: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+
+        label {
+          width: 80%;
+          margin: auto;
+          padding: 0.6rem 0 0.2rem;
+        }
+        input,
+        textarea,
+        button {
+          width: 80%;
+          margin: auto;
+          padding-left: 0.4rem;
+          border: solid 1px #333;
+          border-radius: 5px;
+          outline: none;
+          transition: all 0.3s ease;
+          font-family: $heading;
+          font-size: 01rem;
+
+          &:focus {
+            border: solid 1px $blueColor;
+          }
+        }
+
+        input {
+          height: 40px;
+        }
+        textarea {
+          margin-bottom: 0.6rem;
+          padding: 0.3rem;
+        }
+        button {
+          height: 40px;
+          border: none;
+          background: $blueColor;
+          color: #fff;
+          font-size: 1rem;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
       }
-
-      //   #name {
-      //     display: block;
-      //     & ~ input {
-      //       display: block;
-      //       width: 80%;
-      //       margin: auto;
-      //     }
-      //   }
-      //   #email {
-      //     display: block;
-      //     & ~ input {
-      //       display: block;
-      //       width: 80%;
-      //       margin: auto;
-      //     }
-      //   }
-      //   #message {
-      //     display: block;
-      //     & ~ input {
-      //       display: block;
-      //       width: 80%;
-      //       margin: auto;
-      //     }
-      //   }
     }
-
     .address-info {
-      width: 40%;
-      padding: 0;
-      margin: 0;
-      height: 100%;
-      float: right;
+      width: 100%;
       background: $blueColor;
     }
   }
 }
+
+// .contact {
+//   width: 100%;
+//   height: 500px;
+//   margin-top: 2rem;
+//   font-family: $heading;
+//   text-align: center;
+//   background: #ccc;
+//   h4 {
+//     padding-top: 1.6rem;
+//     font-size: 1.6rem;
+//     background: #ccc;
+//     height: 15%;
+//   }
+//   .container {
+//     border: 1px solid $blueColor;
+//     background: #ccc;
+//     height: 80%;
+//     width: 70%;
+//     margin: auto;
+//     .form {
+//       width: 60%;
+//       height: 100%;
+//       float: left;
+//       text-align: left;
+//       background: #ccc;
+//       padding-left: 1.2rem;
+//       padding-top: 1.2rem;
+//       padding-right: 1.5rem;
+
+//       label {
+//         display: block;
+//         padding-top: 0.8rem;
+//         background: #ccc;
+//         & ~ input {
+//           display: block;
+//           width: 100%;
+//           padding-left: 1.2rem;
+//           height: 40px;
+//           border: 1px solid #333;
+//           background: #ccc;
+//         }
+
+//         & ~ textarea {
+//           display: block;
+//           width: 100%;
+//           border: 1px solid #333;
+//           padding-bottom: 1.2rem;
+//           padding-left: 1.2rem;
+//           font-family: $heading;
+//           font-size: 0.8rem;
+//           background: #ccc;
+//         }
+//       }
+//       button {
+//         display: block;
+//         width: 80%;
+//         height: 40px;
+//         border: 1px solid #333;
+//         border-top-left-radius: 5px;
+//         border-bottom-left-radius: 5px;
+//         border-top-right-radius: 5px;
+//         border-bottom-right-radius: 5px;
+//         background: #ccc;
+//         width: 100%;
+//         background: $blueColor;
+//         margin-top: 5px;
+//         color: #fff;
+//         font-size: 1.2rem;
+//       }
+
+//     }
+
+//     .address-info {
+//       width: 40%;
+//       padding: 0;
+//       margin: 0;
+//       height: 100%;
+//       float: right;
+//       background: $blueColor;
+//     }
+//   }
+// }
