@@ -1,5 +1,9 @@
 const express = require("express");
 const path = require("path");
+const { body, validationResult } = require("express-validator");
+const { sanitizeBody } = require("express-validator");
+
+const sendMail = require("./mail");
 
 const app = express();
 
@@ -15,11 +19,58 @@ app.use(express.json());
 
 // Handle Routes
 
-app.post("/email", (req, res) => {
-  // Send email here
-  console.log("Data:", req.body);
-  res.json({ message: "Message received!!! " });
-});
+app.post(
+  "/email",
+  // [
+  //   body("email", "Invalid email address")
+  //     .isEmail()
+  //     .normalizeEmail(),
+  //   ,
+  //   body("subject")
+  //     .isLength({ min: 3 })
+  //     .not()
+  //     .isEmpty()
+  //     .trim()
+  //     .escape(),
+
+  //   body("text")
+  //     .isLength({ min: 10 })
+  //     .not()
+  //     .isEmpty()
+  //     .trim()
+  //     .escape(),
+  //   sanitizeBody("notifyOnReply").toBoolean()
+  // ],
+  (req, res) => {
+    const errors = validationResult(req);
+
+    // Send email here
+    console.log("Data:", req.body);
+    const { subject, email, text } = req.body;
+
+    // VALIDATE DATA
+    // if (!errors.isEmpty()) {
+    //   return res.status(422).json({ errors: errors.array() });
+    // } else {
+    //   // inputs are email, subject, text, callback
+    //   sendMail(email, subject, text, function(err, data) {
+    //     if (err) {
+    //       res.status(500).json({ message: "Internal Error >>>>>" });
+    //     } else {
+    //       res.json({ message: "Email sent >>>>>" });
+    //     }
+    //   });
+    // }
+
+    sendMail(email, subject, text, function(err, data) {
+      if (err) {
+        res.status(500).json({ message: "Internal Error >>>>>" });
+      } else {
+        res.json({ message: "Email sent >>>>>" });
+      }
+    });
+  }
+);
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "backend", "server.html"));
 });
