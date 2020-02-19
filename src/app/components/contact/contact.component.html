@@ -1,14 +1,14 @@
 <section class="contact">
   <h4>Contect with Us</h4>
   <div class="container">
-    <div class="form" (ngSubmit)="onSubmit()">
-      <form [formGroup]="message">
-        <label for="name"> Name:</label>
+    <div class="form">
+      <form [formGroup]="message" (ngSubmit)="onSubmit()">
+        <label for="subject"> Subject:</label>
         <input
-          id="name"
+          id="subject"
           type="text"
-          formControlName="name"
-          placeholder="Enter your name ..."
+          formControlName="subject"
+          placeholder="Enter your subject ..."
           required
         />
 
@@ -32,7 +32,9 @@
         >
         </textarea>
 
-        <button type="submit" [disabled]="!message.valid">Send Message</button>
+        <button type="submit" [disabled]="!message.valid">
+          Send Message
+        </button>
       </form>
     </div>
     <div class="address-info">

@@ -17,6 +17,15 @@ app.use(
 );
 app.use(express.json());
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
+
 // Handle Routes
 
 app.post(
@@ -46,7 +55,7 @@ app.post(
 
     // Send email here
     console.log("Data:", req.body);
-    const { subject, email, text } = req.body;
+    const { subject, email, textMessage } = req.body;
 
     // VALIDATE DATA
     // if (!errors.isEmpty()) {
@@ -62,7 +71,7 @@ app.post(
     //   });
     // }
 
-    sendMail(email, subject, text, function(err, data) {
+    sendMail(email, subject, textMessage, function(err, data) {
       if (err) {
         res.status(500).json({ message: "Internal Error >>>>>" });
       } else {

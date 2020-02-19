@@ -1,6 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -9,7 +10,7 @@ import { IntroComponent } from "./components/intro/intro.component";
 import { SponsorsComponent } from "./components/sponsors/sponsors.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { ContactComponent } from "./components/contact/contact.component";
-import { ProjectsCardsComponent } from './components/projects-cards/projects-cards.component';
+import { ProjectsCardsComponent } from "./components/projects-cards/projects-cards.component";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,12 @@ import { ProjectsCardsComponent } from './components/projects-cards/projects-car
     ContactComponent,
     ProjectsCardsComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
