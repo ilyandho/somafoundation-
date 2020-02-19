@@ -10,9 +10,12 @@ export class NavBarComponent implements OnInit {
 
   ngOnInit() {}
   // Add the class to give the effect icon
-  toggleNav(event) {
-    event.target.classList.toggle("change");
-    const childNoes = event.target.children;
-    event.target.children.style.opacity = 0;
+  toggleNav(event: any) {
+    event.target.classList.toggle("close");
+    if (event.target.classList.contains("close")) {
+      console.log("Closed");
+    } else {
+      console.log("Open");
+    }
   }
 }
